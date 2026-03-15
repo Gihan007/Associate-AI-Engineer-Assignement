@@ -1,0 +1,25 @@
+{
+  "current_model": "logisticregression",
+  "retrained_date": "2026-03-14T06:14:54.652045",
+  "data_samples": 25060,
+  "all_models": {
+    "logisticregression": {
+      "accuracy": 0.8880686352753392,
+      "f1_score": 0.8889328845773115
+    },
+    "svm": {
+      "accuracy": 0.8750997605746209,
+      "f1_score": 0.875497215592681
+    },
+    "naive_bayes": {
+      "accuracy": 0.8573423782920989,
+      "f1_score": 0.8590021691973969
+    }
+  },
+  "metrics": {
+    "accuracy": 0.8880686352753392,
+    "f1_score": 0.8889328845773115
+  },
+  "model_name": "logisticregression",
+  "vocabulary_size": 5000
+}

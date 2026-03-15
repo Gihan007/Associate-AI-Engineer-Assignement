@@ -1,0 +1,7 @@
+,dtype,non_null,null_count,null_pct,unique,unique_pct
+review,str,25000,0,0.0,24904,99.62
+label,int64,25000,0,0.0,2,0.01
+sentiment,str,25000,0,0.0,2,0.01
+review_cleaned,str,25000,0,0.0,24903,99.61
+text_length,int64,25000,0,0.0,3985,15.94
+word_count,int64,25000,0,0.0,972,3.89

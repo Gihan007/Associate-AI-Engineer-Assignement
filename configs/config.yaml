@@ -1,0 +1,37 @@
+# Configuration file for ML project
+
+# Data configuration
+data:
+  raw_path: "./data/raw"
+  processed_path: "./data/processed"
+  test_size: 0.2
+  random_state: 42
+
+# Model configuration
+model:
+  name: "default_model"
+  type: "sklearn"
+  hyperparameters:
+    learning_rate: 0.001
+    max_depth: 10
+    n_estimators: 100
+
+# Training configuration
+training:
+  batch_size: 32
+  epochs: 100
+  validation_split: 0.1
+  early_stopping: true
+  patience: 10
+
+# Paths
+paths:
+  data: "./data"
+  models: "./models"
+  results: "./results"
+  logs: "./logs"
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

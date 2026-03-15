@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  sentiment-api:
+    build: .
+    container_name: imdb-sentiment-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./results:/app/results
+      - ./notebooks:/app/notebooks
+    environment:
+      - PYTHONUNBUFFERED=1
+      - ADMIN_API_KEY=your-secret-key-change-me
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s  # Increased to allow model training to complete
+
+# Volume definitions for persistence
+volumes:
+  models:
+  data:
+  results:
